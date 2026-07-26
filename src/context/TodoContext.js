@@ -4,7 +4,8 @@ export const TodoContext = createContext({
     todos: [],
     addTodo: () => {},
     deleteTodo: () => {},
-    updateTodo: () => {}
+    updateTodo: () => {},
+    checkToggle: () => {}
 });
 
 export const TodoContextProvider = TodoContext.Provider
