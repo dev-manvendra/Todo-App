@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { TodoContextProvider } from './context/TodoContext'
+import { TodoContextProvider , useTodoContext } from './context/TodoContext'
+import TodoForm from './assets/components/TodoForm'
+import TodoItem from './assets/components/TodoItem'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, addTodo, deletTodo, updateTodo] = useTodoContext();
 
   return (
     <TodoContextProvider>
-      <h1 className="bg-amber-800 text-white text-xl p-1 ">this is the heading</h1>
+      <TodoForm />
+      <TodoItem todo= {todo} />
     </TodoContextProvider>
   )
 }
